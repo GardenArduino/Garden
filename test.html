@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+    $(".pb1").css("width", "85%");
+	$(".pb2").css("width", "10%");
+	$(".pb3").css("width", "50%");
+	
+	var d = new Date();
+    document.getElementById('date').innerHTML = "Dernier login "+d.getDate()+"/"+d.getMonth()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+<div class="row">
+                <br>		
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Humidité
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/gauge48.png"> <b> 85 </b> %
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                             <div class="progress progress-striped active">
+							<div class="progress-bar pb1">85 %</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            Humidité Sol
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/gauge48.png"> <b> 10 </b> %
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                             <div class="progress progress-striped active">
+							<div class="progress-bar pb2">10 %</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Niveau Eau
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/wl.png" width="15%" height="15%"> <b> 50 </b> L  / <b> 30 </b> %
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="progress progress-striped active">
+							<div class="progress-bar pb3">50 Litres</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Témpérature
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/temp-20-25.png"> <b> 25,7 </b> °C
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                            Derniere mesure: 10s
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Pression
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/baro48.png"> <b> 1032 </b> hPa
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                            Prevision: Ensoleillé
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Pompe
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/Pump148_On.png"> <b> On </b>
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                            Derniere activation 20/10/16 11:42
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            RFID
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/nfc.png"> <b> Tag1 </b>
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                            Derniere connexion 20/10/16 11:42
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Timers
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+                            <img src="icons/clock48.png">
+								<button type="button" class="btn btn-default">2 min</button>
+								<button type="button" class="btn btn-default">6 min</button>	
+								<button type="button" class="btn btn-default">10 min</button>						
+							</p>
+                        </div>
+                        <div class="panel-footer">
+                            Dernier lancement 20/10/16 11:42
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            E.T.C.
+                        </div>
+                        <div class="panel-body">
+						<p align=center>
+						        <a href="#" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-cog"></span> Configuration </a> 
+								<a href="login.html" class="btn btn-lg btn-inverse"><span class="glyphicon glyphicon-log-out"></span> Logout</a>				
+							</p>
+                        </div>
+                        <div class="panel-footer" id="date">
+                        </div>
+                    </div>
+                </div>
+				
+				
+      </div>
+	  </div>
+	  </section>
+</body>
+</html>

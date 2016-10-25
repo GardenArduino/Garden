@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style>
+.login-panel {
+  margin-top: 25%;
+}
+body {
+  background-color: #f8f8f8;
+}
+</style>
+<script>
+function verifForm()
+{
+   if (document.getElementById("user").value == "Thomas")
+   {
+   var u = true;
+   document.getElementById("dU").className = "form-group has-success has-feedback";
+   document.getElementById("gU").className = "glyphicon glyphicon-ok form-control-feedback";
+   document.getElementById('hU').innerHTML = "OK";
+   }
+   else
+   {
+   var u = false;
+   document.getElementById("dU").className = "form-group has-error has-feedback";
+   document.getElementById("gU").className = "glyphicon glyphicon-remove form-control-feedback";
+   document.getElementById('hU').innerHTML = "Saisie Incorrecte";
+   }
+   
+   if (document.getElementById("pass").value == "1234")
+   {
+   var p = true;
+   document.getElementById("dP").className = "form-group has-success has-feedback";
+   document.getElementById("gP").className = "glyphicon glyphicon-ok form-control-feedback";
+   document.getElementById('hP').innerHTML = "OK";
+   }
+   else
+   {
+   var p = false;
+   document.getElementById("dP").className = "form-group has-error has-feedback";
+   document.getElementById("gP").className = "glyphicon glyphicon-remove form-control-feedback";
+   document.getElementById('hP').innerHTML = "Saisie Incorrecte";
+   }
+   
+   if(p == true && u == true)
+   {
+   return true;
+   }
+   else
+   {
+      return false;
+   }
+}
+</script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+			<div class="col-sm-3 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Connexion</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" action="test.html" method="POST" onsubmit="return verifForm()">
+                            <fieldset>
+                                <div class="form-group " id="dU">
+                                    <input class="form-control" placeholder="User" name="user" type="text" id="user" autofocus="">
+                                <span class="glyphicon" id="gU"></span>
+                                <span class="help-block" id="hU"></span>
+                                </div>
+                                <div class="form-group " id="dP">
+                                <input class="form-control" placeholder="Password" name="pass" type="password" id="pass" value="">
+                                <span class="" id="gP"></span>
+                                <span class="help-block" id="hP"></span>
+                                </div>
+								
+                                <input type="submit" class="btn btn-lg btn-success btn-block">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
